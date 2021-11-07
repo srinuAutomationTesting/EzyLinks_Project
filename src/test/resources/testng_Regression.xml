@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing Automation EZY links application">
+	<test name="EzyLinks application testing">
+
+		<!-- environment Variables -->
+
+		<classes>
+		
+			
+			<class name="com.ezl.qa.testcases.LoginPageTest" />
+			<class name="com.ezl.qa.testcases.HomePageTest" />
+			<class
+				name="com.ezl.qa.testcases.PersonalLinesApplicantPageTest" />
+		 <class name="com.ezl.qa.testcases.PolicyInfoPageTest" /> 
+				<class name="com.ezl.qa.testcases.DriversPageTest" />
+		</classes>
+
+
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

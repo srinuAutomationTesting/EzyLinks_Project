@@ -1,0 +1,106 @@
+notes-->file
+
+About PageObject Model:
+..................................
+Base class is the parent class of all the classes in which we have written initilaization method and 
+inside the constructor we have defind the properties file and we are initialzing the prop variable and driver variable 
+the both variables are global variable , in the subclasses we are extending the base class so that we can inherit all 
+the properties of baseclass.
+
+Login Page --> PageFactory and Action Methods()
+
+By using super()keyword so that baseclass constructor will be called 
+
+
+scrool top:
+window.scrollTo(0,document.body.scrollHeight)
+
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,850)", "");
+		
+		//Hard wait
+		
+		 WebDriverWait wait = new WebDriverWait(driver, 10);
+		    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='dropdownMenuButton']")));
+		    element.click();
+		    
+		   
+		    //Scrool to top
+		    WebElement element = driver.findElement(By.id("id"));
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
+        
+        
+        
+        Action class:
+        
+        Actions act =  new Actions(driver);
+		act.moveToElement(addDriver).build().perform();
+	     act.click();
+
+// generate Extent report:
+first we need to add ..extentreports.. dependency 
+
+//@CacheLookup
+
+@FindBy(xpath="")
+@CacheLookup()
+WebElement username;
+
+we can improver the script performance , it will create the cache memory instead of hitting the browser it hitting the cache memory
+
+//WebDriverFireEvent
+
+To Generate the selenium action logs
+
+//Throwable :
+It will handel Exceptions as well as Errors
+
+//Listener purpose
+Listener will listen each and every activity on the basis of that activity it will generate the reports at the end
+	
+//Jenkins
+
+	Jenkins is a CI/CD tool, which uses various other tools/plugins to automate the complete build cycle
+
+download jenkins war file 
+Jenkins(local)
+url : http://localhost:9090/
+un :asrinu
+pwd:Sree@201
+.............................................
+//Maven 
+Maven is a build lifecycle management tool that helps in dependency management and creating automated builds.
+
+//Log
+To capture the information what is going on at the time of execution , simply what is going on each and every step,
+what are the difference execution what are diffrent background going on ,so we can understnading the execution
+what's going on	. 
+Types of logs:
+1.info
+2.warn
+3.debug
+4.fatal
+How to generate the logs ?
+we use Apache log4j API
+How it reads?
+It reads log4J configuration from log4J.properties file
+Where to create ?
+create inside the resource folder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
